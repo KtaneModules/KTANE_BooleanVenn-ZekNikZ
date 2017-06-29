@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 using LogicVenn;
-
-
 
 public class LogicVennModule : MonoBehaviour {
 
@@ -28,6 +26,8 @@ public class LogicVennModule : MonoBehaviour {
     public bool OP_LIMP(bool a, bool b) { return !(a && !b); }
     public bool OP_RIMP(bool a, bool b) { return !(!a && b); }
     string[] operators = new string[] { " ∧ ", " ∨ ", " ⊻ ", "→", " | ", " ↓ ", "↔", "←"  };
+
+    string[] names = new string[] {"NONE", "C", "B", "BC", "A", "AC", "AB", "ABC" };
 
     int moduleId;
     static int moduleIdCounter = 1;
@@ -108,13 +108,23 @@ public class LogicVennModule : MonoBehaviour {
         challenge = dis;
         DisplayText.text = dis;
 
-        string solstr = (solution[0] == 1 ? "TRUE" : "FALSE");
-        for (int i = 1; i < 8; i++) {
-            solstr += ", " + (solution[i] == 1 ? "TRUE" : "FALSE");
-        }
+        //string solstr = dirs[0] + ": " + (solution[indices[0]] == 1 ? "TRUE" : "FALSE");
+        //for (int i = 1; i < 8; i++) {
+        //    solstr += ", " + dirs[i] + ": " + (solution[indices[i]] == 1 ? "TRUE" : "FALSE");
+        //}
 
         Debug.LogFormat("[Boolean Venn Diagram #{0}] Expression: \"{1}\"", moduleId, challenge);
-        Debug.LogFormat("[Boolean Venn Diagram #{0}] Solution: {1}", moduleId, "{" + solstr + "}");
+        //Debug.LogFormat("[Boolean Venn Diagram #{0}] Solution: {1}", moduleId, "{" + solstr + "}");
+
+        object[] results = new object[9];
+
+        results[0] = moduleId;
+
+        for (int i = 0; i < 8; i++) {
+            results[i + 1] = solution[i] == 1 ? "TRUE " : "FALSE";
+        }
+
+        Debug.LogFormat("[Boolean Venn Diagram #{0}]\n                       , - ~ ~ ~ - ,                  _ _\n                   , '               ' ,          , '     ' ,\n                 ,           A           ,      ,    NONE     ,\n                ,          {5}          ,     ,    {1}    ,\n               ,                           ,    ,             ,\n               , - ~ ~ ~ - ,   , - ~ ~ ~ - |      ,         ,\n           , ' ,    AB     , ^ ,     AC    , ' ,    ' - - '\n         ,      ,  {7} ,       ,  {6} ,      ,\n        ,        ,      ,   ABC   ,      ,        ,\n       ,           ,   ,   {8}   ,  , '          ,\n       |       B     ' + , _ _ _ , +'      C       ,\n       ,     {3}     ,           ,     {2}     ,\n        ,               ,   BC    ,               ,\n         ,               , {4} ,               ,\n           ,               ,  , '             , '\n             ' - , _ _ _ , -'' - , _ _ _ ,  '", results);
     }
 
     bool CheckSolution() {
@@ -138,6 +148,7 @@ public class LogicVennModule : MonoBehaviour {
         if (solution[button] == 1) {
             currentState[button] = 1;
             UpdateColor(button);
+            Debug.LogFormat("[Boolean Venn Diagram #{0}] {1} button pressed correctly!", moduleId, names[button]);
             if (CheckSolution()) {
                 Debug.LogFormat("[Boolean Venn Diagram #{0}] Module Solved!", moduleId);
                 for (int i = 0; i < 8; i++) {
@@ -148,11 +159,92 @@ public class LogicVennModule : MonoBehaviour {
             }
         } else {
             if (currentState[button] != 2) {
-                Debug.LogFormat("[Boolean Venn Diagram #{0}] Button {1} pressed incorrectly!", moduleId, button);
+                Debug.LogFormat("[Boolean Venn Diagram #{0}] {1} button pressed incorrectly!", moduleId, names[button]);
                 currentState[button] = 2;
                 UpdateColor(button);
                 BombModule.HandleStrike();
             }
         }
+    }
+
+    KMSelectable[] ProcessTwitchCommand(string command) {
+        command = command.Trim().ToLowerInvariant();
+        var pieces = command.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+
+        var list = new List<KMSelectable>();
+        for (int i = 0; i < pieces.Length; i++) {
+            switch (pieces[i]) {
+                case "top":
+                case "north":
+                case "12":
+                case "a":
+                case "t":
+                case "n":
+                    list.Add(Buttons[4]);
+                    break;
+
+                case "middleleft":
+                case "northwest":
+                case "10":
+                case "ab":
+                case "ml":
+                case "nw":
+                    list.Add(Buttons[6]);
+                    break;
+
+                case "middleright":
+                case "northeast":
+                case "2":
+                case "ac":
+                case "mr":
+                case "ne":
+                    list.Add(Buttons[5]);
+                    break;
+
+                case "bottomleft":
+                case "southwest":
+                case "8":
+                case "b":
+                case "bl":
+                case "sw":
+                    list.Add(Buttons[2]);
+                    break;
+
+                case "bottomright":
+                case "southeast":
+                case "4":
+                case "c":
+                case "br":
+                case "se":
+                    list.Add(Buttons[1]);
+                    break;
+
+                case "bottommiddle":
+                case "south":
+                case "6":
+                case "bc":
+                case "bm":
+                case "s":
+                    list.Add(Buttons[3]);
+                    break;
+
+                case "outside":
+                case "none":
+                case "o":
+                    list.Add(Buttons[0]);
+                    break;
+
+                case "middle":
+                case "all":
+                case "abc":
+                case "m":
+                    list.Add(Buttons[7]);
+                    break;
+
+                default:
+                    return null;
+            }
+        }
+        return list.ToArray();
     }
 }
