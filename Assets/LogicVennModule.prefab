@@ -40,6 +40,7 @@ GameObject:
   - 23: {fileID: 23000013907074982}
   - 114: {fileID: 114000012659817322}
   - 114: {fileID: 114000014021906764}
+  - 64: {fileID: 64000010656444542}
   m_Layer: 0
   m_Name: SW Button
   m_TagString: Untagged
@@ -112,6 +113,7 @@ GameObject:
   - 4: {fileID: 4000014098962382}
   - 33: {fileID: 33000010108336522}
   - 114: {fileID: 114000014154952886}
+  - 64: {fileID: 64000011618842860}
   m_Layer: 0
   m_Name: M Hightlight
   m_TagString: Untagged
@@ -165,6 +167,7 @@ GameObject:
   - 23: {fileID: 23000010227124132}
   - 114: {fileID: 114000013180799398}
   - 114: {fileID: 114000014182489916}
+  - 64: {fileID: 64000010032313510}
   m_Layer: 0
   m_Name: NW Button
   m_TagString: Untagged
@@ -220,6 +223,7 @@ GameObject:
   - 23: {fileID: 23000012398233288}
   - 114: {fileID: 114000011484201674}
   - 114: {fileID: 114000014044457788}
+  - 64: {fileID: 64000012042150828}
   m_Layer: 0
   m_Name: SE Button
   m_TagString: Untagged
@@ -256,6 +260,7 @@ GameObject:
   - 23: {fileID: 23000012058989600}
   - 114: {fileID: 114000011055749802}
   - 114: {fileID: 114000013946752530}
+  - 64: {fileID: 64000010121774194}
   m_Layer: 0
   m_Name: S Button
   m_TagString: Untagged
@@ -398,6 +403,7 @@ GameObject:
   - 23: {fileID: 23000011193783300}
   - 114: {fileID: 114000013902874614}
   - 114: {fileID: 114000010494914380}
+  - 64: {fileID: 64000010913334348}
   m_Layer: 0
   m_Name: NE Button
   m_TagString: Untagged
@@ -435,6 +441,7 @@ GameObject:
   - 23: {fileID: 23000010949678086}
   - 114: {fileID: 114000011884442910}
   - 114: {fileID: 114000014140760448}
+  - 64: {fileID: 64000011446923356}
   m_Layer: 0
   m_Name: N Button
   m_TagString: Untagged
@@ -1265,6 +1272,90 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012044882984}
   m_Mesh: {fileID: 4300000, guid: 451fbff3d7315234bbc8c13564867876, type: 3}
+--- !u!64 &64000010032313510
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011547157906}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 5db45cd445bae614c9dd32353b5ab908, type: 3}
+--- !u!64 &64000010121774194
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012178101068}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 5db45cd445bae614c9dd32353b5ab908, type: 3}
+--- !u!64 &64000010656444542
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010499556862}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: ecd4938e34ae1244584726dda54711a6, type: 3}
+--- !u!64 &64000010913334348
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013808214574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 5db45cd445bae614c9dd32353b5ab908, type: 3}
+--- !u!64 &64000011446923356
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013938547276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: ecd4938e34ae1244584726dda54711a6, type: 3}
+--- !u!64 &64000011618842860
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011067413174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 6b766fe3b2fc2544288f20e2b07244de, type: 3}
+--- !u!64 &64000012042150828
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012032753754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: ecd4938e34ae1244584726dda54711a6, type: 3}
 --- !u!64 &64000013987265534
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -1455,7 +1546,8 @@ MonoBehaviour:
   IsPassThrough: 0
   ChildRowLength: 0
   Highlight: {fileID: 114000011003372848}
-  SelectableColliders: []
+  SelectableColliders:
+  - {fileID: 64000010121774194}
   DefaultSelectableIndex: 0
   AllowSelectionWrapX: 0
   AllowSelectionWrapY: 0
@@ -1503,7 +1595,8 @@ MonoBehaviour:
   IsPassThrough: 0
   ChildRowLength: 0
   Highlight: {fileID: 114000012641682130}
-  SelectableColliders: []
+  SelectableColliders:
+  - {fileID: 64000012042150828}
   DefaultSelectableIndex: 0
   AllowSelectionWrapX: 0
   AllowSelectionWrapY: 0
@@ -1538,7 +1631,8 @@ MonoBehaviour:
   IsPassThrough: 0
   ChildRowLength: 0
   Highlight: {fileID: 114000013569386892}
-  SelectableColliders: []
+  SelectableColliders:
+  - {fileID: 64000011446923356}
   DefaultSelectableIndex: 0
   AllowSelectionWrapX: 0
   AllowSelectionWrapY: 0
@@ -1617,7 +1711,8 @@ MonoBehaviour:
   IsPassThrough: 0
   ChildRowLength: 0
   Highlight: {fileID: 114000013208642898}
-  SelectableColliders: []
+  SelectableColliders:
+  - {fileID: 64000010656444542}
   DefaultSelectableIndex: 0
   AllowSelectionWrapX: 0
   AllowSelectionWrapY: 0
@@ -1681,7 +1776,8 @@ MonoBehaviour:
   IsPassThrough: 0
   ChildRowLength: 0
   Highlight: {fileID: 114000014067404888}
-  SelectableColliders: []
+  SelectableColliders:
+  - {fileID: 64000010032313510}
   DefaultSelectableIndex: 0
   AllowSelectionWrapX: 0
   AllowSelectionWrapY: 0
@@ -1716,7 +1812,8 @@ MonoBehaviour:
   IsPassThrough: 0
   ChildRowLength: 0
   Highlight: {fileID: 114000014154952886}
-  SelectableColliders: []
+  SelectableColliders:
+  - {fileID: 64000011618842860}
   DefaultSelectableIndex: 0
   AllowSelectionWrapX: 0
   AllowSelectionWrapY: 0
@@ -1786,7 +1883,8 @@ MonoBehaviour:
   IsPassThrough: 0
   ChildRowLength: 0
   Highlight: {fileID: 114000013799796286}
-  SelectableColliders: []
+  SelectableColliders:
+  - {fileID: 64000010913334348}
   DefaultSelectableIndex: 0
   AllowSelectionWrapX: 0
   AllowSelectionWrapY: 0
