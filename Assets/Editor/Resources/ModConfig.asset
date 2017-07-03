@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: BooleanVenn
   title: Boolean Venn Diagram
-  version: 1.7
+  version: 1.7.1
   outputFolder: D:\SteamLibrary\steamapps\common\Keep Talking and Nobody Explodes\mods

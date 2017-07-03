@@ -7,7 +7,7 @@ public class LogicVennModule : MonoBehaviour {
 
     public KMBombInfo BombInfo;
     public KMBombModule BombModule;
-    public KMAudio KMAudio;
+    public KMAudio Audio;
 
     public KMSelectable[] Buttons;
     public Material[] ColorMaterials;
@@ -143,7 +143,7 @@ public class LogicVennModule : MonoBehaviour {
     }
 
     void HandlePress(int button) {
-        KMAudio.PlaySoundAtTransform("tick", this.transform);
+        Audio.PlaySoundAtTransform("tick", this.transform);
         GetComponent<KMSelectable>().AddInteractionPunch(0.5f);
         if (solution[button] == 1) {
             currentState[button] = 1;
