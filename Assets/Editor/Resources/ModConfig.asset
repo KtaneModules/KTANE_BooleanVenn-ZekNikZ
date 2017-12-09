@@ -13,5 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: BooleanVenn
   title: Boolean Venn Diagram
-  version: 1.7.2
+  description: "You thought Logic was tough? Try doing it 8 times over!\n\r\nDesigned
+    and implemented by ZekNikZ.\n\r\nModule ID: booleanVennModule\n\r\nManuals\r\nHTML:
+    https://ktane.timwi.de/HTML/Boolean%20Venn%20Diagram.html\nPDF: https://ktane.timwi.de/PDF/Boolean%20Venn%20Diagram.pdf"
+  version: 2.0.1
   outputFolder: build
+  previewImage: {fileID: 2800000, guid: 6eee461cce3b80f4893cce71003d8e76, type: 3}
