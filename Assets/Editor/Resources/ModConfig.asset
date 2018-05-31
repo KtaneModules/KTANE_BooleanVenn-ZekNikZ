@@ -18,4 +18,4 @@ MonoBehaviour:
     https://ktane.timwi.de/HTML/Boolean%20Venn%20Diagram.html\nPDF: https://ktane.timwi.de/PDF/Boolean%20Venn%20Diagram.pdf"
   version: 2.0.1
   outputFolder: build
-  previewImage: {fileID: 2800000, guid: 6eee461cce3b80f4893cce71003d8e76, type: 3}
+  previewImage: {fileID: 2800000, guid: f0ec4c2842d81aa429401d01e65cbcef, type: 3}
